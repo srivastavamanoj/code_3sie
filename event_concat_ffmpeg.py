@@ -2,12 +2,17 @@ import time
 import os
 import glob
 
-dirname = '/home/mks/3sie/myCode/data/';
+# Name of the directory where all the files are
+dirname = '/home/mks/3sie/myCode/data/' 
+# How many frames we want to go back, for example, if we have the eventIdx 27, and lookBackCounter
+# 5, we will have ffmpeg comands to have frames 23-27 stitched together
 lookBackCounter = 5 
+#prefix for two kind of files;  
 prefix1 = 'foo_'
 prefix2 = 'bar_'
+#suffix for the files, what format, jpeg, png, txt?
 suffix = '.png'
-sep = '/'
+# command name and arguments
 baseCmd1 = 'ffmpeg $options1 '
 baseCmd2 = 'gppeg $options2 '
 
